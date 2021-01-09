@@ -1,5 +1,5 @@
 # Recipes-App
-An application which gives you some recipes recommendations based on the ingredients in your fridge or a certain category.
+An application which gives you recipes recommendations based on the ingredients in your fridge or a certain category.
 
 Features:
 -	Opening recipes List based on categories.
