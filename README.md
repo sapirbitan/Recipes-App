@@ -1,7 +1,7 @@
 # Recipes-App
 An application which gives you recipes recommendations based on the ingredients in your fridge or a certain category.
 
-Features:
+#**Features:**
 -	Opening recipes List based on categories.
 -	Opening recipes based on the ingredients in your fridge.
 -	Recipes Details Screen
@@ -10,7 +10,7 @@ Features:
 -	Ingredients List
 -	Ingredient & Recipe search
 
-Wish List:
+#**Wish List:**
 -	Filter recipes based on special dietary restrictions, such as: Kosher, Halal, vegan, vegetarian, etc.
 -	An option to log in as a user, save & share favorite recipes.
 -	Most searched recipes will appear first.
