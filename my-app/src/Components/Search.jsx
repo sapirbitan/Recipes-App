@@ -4,12 +4,12 @@ class Search extends Component {
     render() { 
         return(
             <div>
-            <form>
-                <label>
-                    <input type="text" name="Search" />
-                </label>
-                    <input type="submit" value="Search" />
-            </form>
+                <form>
+                    <label>
+                        <input type="text" name="Search" />
+                    </label>
+                        <input type="submit" value="Search" />
+                </form>
             </div>
 
         )
