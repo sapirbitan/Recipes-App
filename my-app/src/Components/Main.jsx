@@ -8,7 +8,6 @@ class Main extends Component {
         return(
             <div>
                 <header className = "Main"> Sheffing From Scrap</header>
-                <img src = {omlet_img} width = "200" height = "100"/>
             </div>
             )
     }

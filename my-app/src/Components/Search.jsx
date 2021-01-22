@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import DATA from './MOCK_DATA.json'
+//import DATA from './MOCK_DATA.json'
+//import RecipeData from './Recipes.json'
+import RecipeData2 from './Recipe2.json'
+
 export default Search;
 function SearchHelp(searchTerm, ){
-  const RecipeList = DATA.filter((val) =>{
+  const RecipeList = RecipeData2.filter((val) =>{
   if(searchTerm == ""){
     return val
   }
@@ -16,12 +19,12 @@ function Search() {
   const [searchTerm, setSearchTerm] = useState('')
   return(
     <div className = 'SearchBar'>
-      <label htmlFor = "search">Search by recipe</label>
+      <label htmlFor = "search">Search by recipe:</label>
       <input type="text" placeHolder = "Search..." onChange = {(e)=>setSearchTerm(e.target.value)}/>
       {SearchHelp(searchTerm).map((val,key)=>{
         return <div className = "RecipeName">
         <p>{val.name}</p>
-        <img src = {val.picture} width = "200" height = "100"/>
+        <img src = {val.image} width = "200" height = "100"/>
         </div>;
         })}
     </div>
