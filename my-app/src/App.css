@@ -36,7 +36,19 @@
     transform: rotate(360deg);
   }
 }
-
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.SearchBar input {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 10px;
+}
 
 .Main {
   height: 100px;

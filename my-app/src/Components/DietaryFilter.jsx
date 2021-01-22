@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
+function filter(_filter){
+        console.log(_filter)
+}
 class DietaryFilter extends Component {
     state = {  }
     render() { 
         return (
             <div id="filter">
-                <button class="btn active" onclick="filter('All')"> Show All</button>
-                <button class="btn" onclick="filter('Kosher')"> Kosher</button>
-                <button class="btn" onclick="filter('Vegan')"> Vegan</button>
-                <button class="btn" onclick="filter('Vegeterian')"> Vegeterian</button>
-                <button class="btn" onclick="filter('Halal')"> Halal</button>
-                <button class="btn" onclick="filter('DairyFree')"> Dairy Free</button>
-                <button class="btn" onclick="filter('GlutenFree')"> GlutenFree</button>
+                <button className="btn active" onClick={filter.bind(this, "All")}> Show All</button>
+                <button className="btn" onClick={filter.bind(this, "Kosher")}> Kosher</button>
+                <button className="btn" onClick={filter.bind(this, "Vegan")}> Vegan</button>
+                <button className="btn" onClick={filter.bind(this, "Vegeterian")}> Vegeterian</button>
+                <button className="btn" onClick={filter.bind(this, "Halal")}> Halal</button>
+                <button className="btn" onClick={filter.bind(this, "Dairy Free")}> Dairy Free</button>
+                <button className="btn" onClick={filter.bind(this, "Gluten Free")}> GlutenFree</button>
             </div> );
     }
-    filter(filter){
 
-    }
 }
  
 export default DietaryFilter;
