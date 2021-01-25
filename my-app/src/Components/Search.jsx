@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
-//import DATA from './MOCK_DATA.json'
-//import RecipeData from './Recipes.json'
-import RecipeData2 from './Recipe2.json'
+import RecipeData from '../Recipes.json'
 
 export default Search;
-function SearchHelp(searchTerm, ){
-  const RecipeList = RecipeData2.filter((val) =>{
-  if(searchTerm == ""){
-    return val
-  }
-  else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){
-    return val
-  }
+function SearchHelp(searchTerm, ){//filters recipes based on the search
+  const RecipeList = RecipeData.filter((current_recipe) =>{
+    if(searchTerm == ""){
+      return current_recipe
+    }
+    else if (current_recipe.name.toLowerCase().includes(searchTerm.toLowerCase())){
+      return current_recipe
+    }
   })
   return RecipeList
 }
 function Search() {
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')//create a new state for the search
   return(
     <div className = 'SearchBar'>
       <label htmlFor = "search">Search by recipe:</label>
       <input type="text" placeHolder = "Search..." onChange = {(e)=>setSearchTerm(e.target.value)}/>
-      {SearchHelp(searchTerm).map((val,key)=>{
+    {SearchHelp(searchTerm).map((recipe,key)=>{
         return <div className = "RecipeName">
-        <p>{val.name}</p>
-        <img src = {val.image} width = "200" height = "100"/>
+        <p>{recipe.name}</p>
+        <img src = {recipe.image} width = "200" height = "100"/>
         </div>;
         })}
     </div>
