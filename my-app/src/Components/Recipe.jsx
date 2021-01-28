@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 class Recipe extends Component {
-    state = {  }
     // A recipe will have: name, picture, ingridients, the recipe itself & tags
     render() { 
-        return ( <section className = "Recipe"> Recipe</section> );
+        return ( <div className = "CurrentRecipe">
+        <p>{this.props.recipe.name}</p>
+        <img src = {this.props.recipe.image} width = "200" height = "100"/>
+        </div>
+        );
     }
 }
  

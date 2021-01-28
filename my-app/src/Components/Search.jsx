@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RecipeData from '../Recipes.json'
+import RecipeList from './RecipeList'
 
 export default Search;
 function SearchHelp(searchTerm, ){//filters recipes based on the search
@@ -19,12 +20,7 @@ function Search() {
     <div className = 'SearchBar'>
       <label htmlFor = "search">Search by recipe:</label>
       <input type="text" placeHolder = "Search..." onChange = {(e)=>setSearchTerm(e.target.value)}/>
-    {SearchHelp(searchTerm).map((recipe,key)=>{
-        return <div className = "RecipeName">
-        <p>{recipe.name}</p>
-        <img src = {recipe.image} width = "200" height = "100"/>
-        </div>;
-        })}
+      <RecipeList recipes = {SearchHelp(searchTerm)}/>
     </div>
 
   )

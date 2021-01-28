@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Recipe from './Recipe'
 class RecipeList extends Component {
-  state = { 
-    recipes: []
-   }
+
   render() { 
-    return ( <h3>{this.state.recipes}</h3> );
+    return (this.props.recipes.map((recipe,key)=>{
+      return <div className = "RecipeName">
+      <Recipe recipe = {recipe}/>
+      </div>;
+      }));
   }
 }
  

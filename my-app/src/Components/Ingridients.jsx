@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 class Ingridients extends Component {
-    state = {  }
+    state = { 
+        ingridients: []
+     }
     render() { 
         return ( <h1>Ingridients</h1> );
     }
